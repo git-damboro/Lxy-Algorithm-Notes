@@ -79,11 +79,73 @@
 | LCR 190 | 加密运算 | 加法器原理 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/bit/LCR190_EncryptionCalculate.java) |
 | LCR 134 | Pow(x, n) | 快速幂 | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/bit/LCR134_MyPow.java) |
 
-## 💡 核心知识笔记 (Learning Notes)
 
-### 1. 位运算 (Bit Manipulation)
-位运算是计算机底层的语言，掌握它可以写出极其高效的代码。
+## 💡 核心知识笔记 (Key Takeaways)
 
+> 这里的每一个总结，都对应着一类经典算法题的通解。
+
+### 1. 链表与数组 (Linked List & Array)
+- **伪头节点 (Dummy Node)**：
+    - 解决链表处理中“头节点可能变化”的问题（如合并链表、删除节点）。
+    - *Code Pattern:* `ListNode dummy = new ListNode(0); ListNode cur = dummy;`
+- **快慢指针 (Fast/Slow Pointers)**：
+    - 解决“倒数第k个节点”、“链表中点”、“判断环”等问题。
+    - *Trick:* 让快指针先走 k 步，或者快指针速度是慢指针的 2 倍。
+- **原地哈希 (In-place Swap)**：
+    - 在 `O(1)` 空间下解决“数组中重复数字”问题。
+    - *Core:* 努力让 `nums[i] == i`，如果不相等就不断交换。
+
+### 2. 栈与队列 (Stack & Queue)
+- **双栈法**：
+    - **实现队列**：InStack 负责进，OutStack 负责出（懒惰搬运，OutStack 空了才搬）。
+    - **Z字形打印二叉树**：利用两个栈的“先进后出”特性控制打印顺序。
+- **辅助栈 (Min Stack)**：
+    - 在 O(1) 时间内获取栈的最小值。
+    - *Strategy:* 辅助栈同步存入当前的最小值（非严格降序）。
+
+### 3. 二叉树 (Binary Tree)
+- **递归 (DFS)**：
+    - 树的核心思维。重点在于定义函数的“宏观语义”，而非纠结细节。
+    - *Template:* `Terminator` (终止条件) -> `Process` (处理当前) -> `Recursion` (递归左右)。
+- **层序遍历 (BFS)**：
+    - 核心数据结构是 **队列 (Queue)**。
+    - *Key:* 利用 `int size = queue.size()` 来锁定当前层的节点数量，实现**分层打印**。
+
+### 4. 回溯算法 (Backtracking)
+- **通用模板**：
+    - 解决排列、组合、路径搜索（迷宫）问题。
+    - *Pattern:* ```java
+      void backtrack(路径, 选择列表) {
+      if (满足结束条件) { res.add(路径); return; }
+      for (选择 : 选择列表) {
+      做选择;
+      backtrack(路径, 选择列表);
+      撤销选择; // 回溯的核心
+      }
+      }
+      ```
+
+### 5. 动态规划 (Dynamic Programming)
+- **滚动数组 (Rolling Array)**：
+    - 将空间复杂度从 `O(N)` 优化至 `O(1)`（如斐波那契、跳台阶）。
+    - *Code:* `sum = (a + b); a = b; b = sum;`
+- **前缀和与贪心**：
+    - 解决“最大子数组和”问题。核心思维是“甩包袱”：如果之前的累加和 < 0，则直接丢弃，从当前开始计算。
+- **网格 DP**：
+    - 解决“矩阵路径最大值”问题。
+    - *Equation:* `dp[i][j] += max(dp[i-1][j], dp[i][j-1])`
+
+### 6. 排序与查找 (Sorting & Search)
+- **二分查找 (Binary Search)**：
+    - 处理有序（或部分有序/旋转）数组。注意边界条件 `left <= right` 还是 `left < right`。
+- **Top K 问题**：
+    - 使用 **堆 (PriorityQueue)**。找最小 K 个用大根堆，找最大 K 个用小根堆。
+    - 时间复杂度：`O(N log K)`。
+- **自定义排序**：
+    - 解决“拼接最小数”问题。
+    - *Rule:* `(x + y).compareTo(y + x)`
+
+### 7. 位运算 (Bit Manipulation)
 - **消除二进制中最后一个 1**：
     - 公式：`n = n & (n - 1)`
     - 应用：统计二进制中 1 的个数，判断是否为 2 的幂。
