@@ -114,14 +114,18 @@
 ### 4. 回溯算法 (Backtracking)
 - **通用模板**：
     - 解决排列、组合、路径搜索（迷宫）问题。
-    - *Pattern:* ```java
+    - *Pattern:*
+      ```java
       void backtrack(路径, 选择列表) {
-      if (满足结束条件) { res.add(路径); return; }
-      for (选择 : 选择列表) {
-      做选择;
-      backtrack(路径, 选择列表);
-      撤销选择; // 回溯的核心
-      }
+          if (满足结束条件) {
+              res.add(new ArrayList<>(路径)); // 注意拷贝
+              return;
+          }
+          for (选择 : 选择列表) {
+              做选择;
+              backtrack(路径, 选择列表);
+              撤销选择; // 回溯的核心
+          }
       }
       ```
 
