@@ -1,4 +1,4 @@
-package com.lxy.leetcode;
+package com.lxy.leetcode.swordoffer.array;
 
 //LCR 128. 库存管理 I
 //
