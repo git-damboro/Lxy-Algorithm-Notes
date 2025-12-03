@@ -22,6 +22,10 @@
 | LCR 128 | 库存管理 I | 二分查找 (变种) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR128_StockManagement.java) |
 | LCR 135 | 报数 | 数组循环 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR135_CountNumbers.java) |
 | LCR 139 | 训练计划 I | 双指针 (奇偶交换) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR139_TrainingPlanI.java) |
+| LCR 179 | 查找总价格为目标值的两个商品 | 双指针 (首尾) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR179_TwoSumSorted.java) |
+| LCR 180 | 文件组合 | 滑动窗口 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR180_FileCombination.java) |
+| LCR 146 | 螺旋遍历二维数组 | 模拟 (边界控制) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR146_SpiralArray.java) |
+
 
 ### 🔗 链表 (LinkedList)
 | 编号 | 题目 | 核心考点 | 难度 | 题解 |
@@ -29,6 +33,8 @@
 | LC 206 | 反转链表 | 迭代 / 双指针 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/linkedlist/LC206_ReverseList.java) |
 | LCR 140 | 训练计划 II (倒数第k个) | 快慢指针 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/linkedlist/LCR140_TrainingPlanII.java) |
 | LCR 142 | 训练计划 IV (合并链表) | 伪头节点 (Dummy) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/linkedlist/LCR142_TrainingPlanIV.java) |
+| LCR 136 | 删除链表的节点 | 链表 (Dummy) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/linkedlist/LCR136_DeleteNode.java) |
+| LCR 154 | 复杂链表的复制 | HashMap / 深拷贝 | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/linkedlist/LCR154_CopyRandomList.java) |
 
 ### 🥞 栈与队列 (Stack & Queue)
 | 编号 | 题目 | 核心考点 | 难度 | 题解 |
@@ -37,6 +43,7 @@
 | LCR 123 | 图书整理 I (倒序打印) | 栈 (先进后出) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/stackqueue/LCR123_ReversePrint.java) |
 | LCR 125 | 图书整理 II (双栈队列) | 栈与队列转换 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/stackqueue/LCR125_CQueue.java) |
 | LCR 147 | 最小栈 | 辅助栈 / 差值法 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/stackqueue/LCR147_MinStack.java) |
+| LCR 148 | 验证图书取出顺序 | 栈模拟 | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/stackqueue/LCR148_ValidateStackSequences.java) |
 
 ### 🌲 二叉树 (Binary Tree)
 | 编号 | 题目 | 核心考点 | 难度 | 题解 |
@@ -84,6 +91,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | LCR 122 | 路径加密 (替换空格) | StringBuilder | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/string/LCR122_ReplaceSpace.java) |
 | LCR 181 | 字符串中的单词反转 | API / 双指针 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/string/LCR181_ReverseMessage.java) |
+| LCR 167 | 招式拆解 I (最长不含重复子串) | 滑动窗口 + Map | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/string/LCR167_DismantlingAction.java) |
 
 ## 💡 核心知识笔记 (Key Takeaways)
 
@@ -178,4 +186,15 @@
     - `trim()`: 去除首尾空格。
     - `split("\\s+")`: 按照正则表达式分割（`\s+` 匹配一个或多个空格）。
     - `toCharArray()`: 将字符串转为字符数组，方便遍历和修改。
+    - 
+### 9. 滑动窗口 (Sliding Window)
+- **核心思想**：维护一个动态范围 `[i, j]`，通过移动 `j` 扩张，移动 `i` 收缩。
+- **模板**：
+  ```java
+  while (j < n) {
+      add(val[j]); // 进窗口
+      while (需收缩) { remove(val[i]); i++; } // 出窗口
+      updateAnswer(); // 更新结果
+      j++;
+  }
 *Created by Lxy | Last Update: 2025-11-28*
