@@ -56,6 +56,9 @@
 | LCR 149 | 彩灯装饰记录 I | BFS (队列) | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR149_LevelOrder.java) |
 | LCR 150 | 彩灯装饰记录 II | BFS (分层) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR150_LevelOrderII.java) |
 | LCR 151 | 彩灯装饰记录 III | BFS (Z字形/双栈) | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR151_LevelOrderIII.java) |
+| LCR 174 | 寻找二叉搜索树中的目标节点 | BST 反向中序 (第K大) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR174_KthLargest.java) |
+| LCR 194 | 二叉树的最近公共祖先 | 递归 (后序) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR194_LowestCommonAncestor.java) |
+
 
 ### 🔙 回溯与 DFS (Backtracking)
 | 编号 | 题目 | 核心考点 | 难度 | 题解 |
