@@ -58,6 +58,9 @@
 | LCR 151 | 彩灯装饰记录 III | BFS (Z字形/双栈) | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR151_LevelOrderIII.java) |
 | LCR 174 | 寻找二叉搜索树中的目标节点 | BST 反向中序 (第K大) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR174_KthLargest.java) |
 | LCR 194 | 二叉树的最近公共祖先 | 递归 (后序) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR194_LowestCommonAncestor.java) |
+| LCR 155 | 将 BST 转化为双向链表 | 中序遍历 / 指针操作 | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR155_TreeToDoublyList.java) |
+| LCR 152 | 验证 BST 后序遍历 | 分治法 / 递归 | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR152_VerifyPostorder.java) |
+| LCR 176 | 判断是否为平衡二叉树 | 自底向上递归 / 剪枝 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/tree/LCR176_IsBalanced.java) |
 
 
 ### 🔙 回溯与 DFS (Backtracking)
