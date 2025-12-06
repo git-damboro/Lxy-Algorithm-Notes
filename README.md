@@ -25,6 +25,7 @@
 | LCR 179 | 查找总价格为目标值的两个商品 | 双指针 (首尾) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR179_TwoSumSorted.java) |
 | LCR 180 | 文件组合 | 滑动窗口 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR180_FileCombination.java) |
 | LCR 146 | 螺旋遍历二维数组 | 模拟 (边界控制) | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR146_SpiralArray.java) |
+| LCR 186 | 文物朝代判断 (扑克牌顺子) | 逻辑 / Set | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/array/LCR186_CheckDynasty.java) |
 
 
 ### 🔗 链表 (LinkedList)
@@ -98,6 +99,8 @@
 | LCR 122 | 路径加密 (替换空格) | StringBuilder | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/string/LCR122_ReplaceSpace.java) |
 | LCR 181 | 字符串中的单词反转 | API / 双指针 | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/string/LCR181_ReverseMessage.java) |
 | LCR 167 | 招式拆解 I (最长不含重复子串) | 滑动窗口 + Map | 中等 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/string/LCR167_DismantlingAction.java) |
+| LCR 169 | 招式拆解 II (第一个只一次的字符) | HashMap | 简单 | [Code](./src/main/java/com/lxy/leetcode/swordoffer/string/LCR169_DismantlingActionII.java) |
+
 
 ## 💡 核心知识笔记 (Key Takeaways)
 
